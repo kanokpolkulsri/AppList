@@ -30,6 +30,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        if editingStyle == .delete{
+            let list = lists[indexPath.row]
+            context.delete(list)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            do{
+                lists = try context.fetch(List.fetchRequest())
+            } catch{
+                print("error fetch")
+            }
+        }
+        tableView.reloadData()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         getData() //get Data from core data
         tableView.reloadData() //reload the tableview
