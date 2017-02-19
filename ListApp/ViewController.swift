@@ -30,6 +30,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getData() //get Data from core data
+        tableView.reloadData() //reload the tableview
+    }
+    
+    func getData(){
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do{
+            lists = try context.fetch(List.fetchRequest())
+        } catch{
+            print("error fetch")
+        }
+    }
+    
 
 }
 
