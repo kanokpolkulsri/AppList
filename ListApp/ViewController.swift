@@ -15,10 +15,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var lists : [List] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lists.count
     }
@@ -45,9 +41,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        getData() //get Data from core data
-        tableView.reloadData() //reload the tableview
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detail", sender: lists[indexPath.row].name!)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextView = segue.destination as? DetailViewController {
+            nextView.name = sender as! String
+        }
     }
     
     func getData(){
@@ -58,6 +59,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print("error fetch")
         }
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getData() //get Data from core data
+        tableView.reloadData() //reload the tableview
+    }
+    
     
 
 }

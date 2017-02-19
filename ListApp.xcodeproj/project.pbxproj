@@ -16,6 +16,7 @@
 		B20F636B1E59AEC500928972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F633B1E59AD1B00928972 /* ViewController.swift */; };
 		B20F636C1E59AEC800928972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F63391E59AD1B00928972 /* AppDelegate.swift */; };
 		B20F63721E59C06000928972 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F63711E59C06000928972 /* AddViewController.swift */; };
+		B20F63741E59CACF00928972 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F63731E59CACF00928972 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B20F635C1E59AD1B00928972 /* ListAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAppUITests.swift; sourceTree = "<group>"; };
 		B20F635E1E59AD1B00928972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B20F63711E59C06000928972 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		B20F63731E59CACF00928972 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				B20F633B1E59AD1B00928972 /* ViewController.swift */,
 				B20F63711E59C06000928972 /* AddViewController.swift */,
 				B20F633D1E59AD1B00928972 /* Main.storyboard */,
+				B20F63731E59CACF00928972 /* DetailViewController.swift */,
 				B20F63431E59AD1B00928972 /* Assets.xcassets */,
 				B20F63451E59AD1B00928972 /* LaunchScreen.storyboard */,
 				B20F63481E59AD1B00928972 /* Info.plist */,
@@ -199,6 +202,7 @@
 				TargetAttributes = {
 					B20F63351E59AD1B00928972 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 786GR2962S;
 						ProvisioningStyle = Automatic;
 					};
 					B20F634C1E59AD1B00928972 = {
@@ -267,6 +271,7 @@
 			files = (
 				B20F636C1E59AEC800928972 /* AppDelegate.swift in Sources */,
 				B20F636B1E59AEC500928972 /* ViewController.swift in Sources */,
+				B20F63741E59CACF00928972 /* DetailViewController.swift in Sources */,
 				B20F63721E59C06000928972 /* AddViewController.swift in Sources */,
 				B20F636A1E59AEA300928972 /* ListApp.xcdatamodeld in Sources */,
 			);
@@ -420,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 786GR2962S;
 				INFOPLIST_FILE = ListApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mvc.ListApp;
@@ -432,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 786GR2962S;
 				INFOPLIST_FILE = ListApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mvc.ListApp;
@@ -513,6 +520,7 @@
 				B20F63631E59AD1B00928972 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B20F63641E59AD1B00928972 /* Build configuration list for PBXNativeTarget "ListAppTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +529,7 @@
 				B20F63661E59AD1B00928972 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B20F63671E59AD1B00928972 /* Build configuration list for PBXNativeTarget "ListAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +538,7 @@
 				B20F63691E59AD1B00928972 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
